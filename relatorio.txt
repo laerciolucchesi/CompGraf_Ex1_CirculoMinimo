@@ -1,0 +1,97 @@
+==================================================
+RELATÓRIO DE ANÁLISE DE PERFORMANCE
+==================================================
+
+CONFIGURAÇÃO DOS TESTES:
+------------------------------
+Limites X: [-1, 1]
+Limites Y: [-1, 1]
+Sigma (distribuição Gaussiana): 0.1
+Número de medições por teste: 1000
+
+RESULTADOS DETALHADOS:
+------------------------------
+
+Teste 1: 1024 pontos
+  Heurístico: 0.000535s ± 0.000099s (raio: 0.378511)
+  Eficiente:  0.003697s ± 0.002112s (raio: 0.366419)
+  Razão:      7.005 ± 4.002
+  Dif. raio:  +0.012092 (+3.30%)
+
+Teste 2: 2048 pontos
+  Heurístico: 0.001081s ± 0.000217s (raio: 0.405451)
+  Eficiente:  0.007550s ± 0.004055s (raio: 0.388959)
+  Razão:      7.116 ± 3.873
+  Dif. raio:  +0.016492 (+4.24%)
+
+Teste 3: 4096 pontos
+  Heurístico: 0.002183s ± 0.000436s (raio: 0.405451)
+  Eficiente:  0.016309s ± 0.009492s (raio: 0.388959)
+  Razão:      7.544 ± 4.254
+  Dif. raio:  +0.016492 (+4.24%)
+
+Teste 4: 8192 pontos
+  Heurístico: 0.004351s ± 0.000665s (raio: 0.415127)
+  Eficiente:  0.031833s ± 0.017687s (raio: 0.399230)
+  Razão:      7.394 ± 4.115
+  Dif. raio:  +0.015897 (+3.98%)
+
+Teste 5: 16384 pontos
+  Heurístico: 0.008778s ± 0.001331s (raio: 0.435997)
+  Eficiente:  0.063118s ± 0.037107s (raio: 0.435365)
+  Razão:      7.271 ± 4.295
+  Dif. raio:  +0.000632 (+0.15%)
+
+Teste 6: 32768 pontos
+  Heurístico: 0.019244s ± 0.004338s (raio: 0.463398)
+  Eficiente:  0.163790s ± 0.087098s (raio: 0.444221)
+  Razão:      8.703 ± 4.569
+  Dif. raio:  +0.019178 (+4.32%)
+
+Teste 7: 65536 pontos
+  Heurístico: 0.039574s ± 0.007562s (raio: 0.461784)
+  Eficiente:  0.380546s ± 0.200303s (raio: 0.456344)
+  Razão:      9.797 ± 5.222
+  Dif. raio:  +0.005440 (+1.19%)
+
+Teste 8: 131072 pontos
+  Heurístico: 0.088006s ± 0.015876s (raio: 0.490786)
+  Eficiente:  0.947820s ± 0.504570s (raio: 0.477816)
+  Razão:      10.937 ± 5.852
+  Dif. raio:  +0.012970 (+2.71%)
+
+Teste 9: 262144 pontos
+  Heurístico: 0.168843s ± 0.028552s (raio: 0.502760)
+  Eficiente:  2.061525s ± 1.140315s (raio: 0.492602)
+  Razão:      12.430 ± 7.008
+  Dif. raio:  +0.010157 (+2.06%)
+
+Teste 10: 524288 pontos
+  Heurístico: 0.358396s ± 0.051902s (raio: 0.507836)
+  Eficiente:  4.679532s ± 2.560293s (raio: 0.498859)
+  Razão:      13.241 ± 7.387
+  Dif. raio:  +0.008977 (+1.80%)
+
+Teste 11: 1048576 pontos
+  Heurístico: 0.718987s ± 0.105590s (raio: 0.507836)
+  Eficiente:  10.681847s ± 5.613998s (raio: 0.501824)
+  Razão:      15.058 ± 8.032
+  Dif. raio:  +0.006012 (+1.20%)
+
+ANÁLISE DOS TEMPOS DE EXECUÇÃO:
+------------------------------
+Razão média (Eficiente/Heurístico): 9.681
+
+ANÁLISE DOS RAIOS:
+------------------------------
+Diferença absoluta média: +0.011304
+Diferença percentual média: +2.65%
+Variação absoluta: [+0.000632, +0.019178]
+Variação percentual: [+0.15%, +4.32%]
+O algoritmo heurístico produziu círculos, em média, 2.65% maiores.
+Nenhum erro encontrado: todos os raios heurísticos são >= eficientes.
+
+COMPLEXIDADE ESTIMADA:
+------------------------------
+  - Algoritmo Heurístico: O(n^1.047)
+  - Algoritmo Eficiente: O(n^1.163)
